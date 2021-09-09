@@ -2,16 +2,16 @@ const express = require("express");
 const path = require("path");
 const adminData = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
-const expressHbs = require('express-handlebars');
+// const expressHbs = require('express-handlebars');
 
 const app = express();
 
-app.engine('hbs', expressHbs({
-  extname: "hbs",
-  defaultLayout: false,
-  layoutsDir: "views/layouts/"
-}));
-app.set('view engine', 'hbs');
+// app.engine('hbs', expressHbs({
+//   extname: "hbs",
+//   defaultLayout: false,
+//   layoutsDir: "views/layouts/"
+// }));
+app.set('view engine', 'ejs');
 
 // app.set('view engine', 'pug');
 app.set('views', 'views');
